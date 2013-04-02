@@ -49,8 +49,9 @@ function pkalrp_admin_init() {
 function pkalrp_admin_print_copyright( $fontsize = 10 ) {
 	$status = get_option('alrp_status');
 	$helpdesk = ( 'premium' == $status ) ? ' | <a href="http://support.exclusivewp.com" target="_blank">Help Desk</a>' : '';
+	$affiliate = ( 'premium' == $status ) ? ' | <a target="_blank" href="https://www.jvzoo.com/affiliates/info/16203">Affiliate Earn 100% Commission</a>' : '';
 ?>
-	<p style="font-family:verdana;font-size:<?php echo $fontsize; ?>px;padding-left: 12px;margin: -20px 2px 5px;text-align: right;">Copyright &copy; 2012, by Purwedi Kurniawan | <a target="_blank" href="https://www.jvzoo.com/affiliates/info/16203">Affiliate Earn 100% Commission</a><?php echo $helpdesk;?></p>
+	<p style="font-family:verdana;font-size:<?php echo $fontsize; ?>px;padding-left: 12px;margin: -20px 2px 5px;text-align: right;">Copyright &copy; 2012, by Purwedi Kurniawan<?php echo $helpdesk.$affiliate;?></p>
 	<?php
 }
 
