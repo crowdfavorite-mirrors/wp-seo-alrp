@@ -4,8 +4,8 @@ Contributors: poer
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=10748556
 Tags: seo, links, post, slide out, related posts, similar posts, internal linking, auto smart links, auto links, amazon
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable tag: 1.2.9.23
+Tested up to: 3.5
+Stable tag: 1.2.12.12
 
 Automatically create auto link, related posts, and slide out related posts when user reach the end of article.
 
@@ -62,10 +62,12 @@ Hosting requirement:
 1. Performance comparison
 
 == Changelog ==
+= 1.2.12.12 =
+* minor bug fix
+
 = 1.2.9.23 =
 * bug fix: slidebox not working with theme that use loop file
 * bug fix: slidebox having transparent background in non webkit browser
-* add enable tooltip option
 
 = 1.2.9.22 =
 * 5 new slide out theme (total 6 theme)

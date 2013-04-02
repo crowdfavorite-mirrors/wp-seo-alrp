@@ -40,8 +40,8 @@
 .alrp-table tr:nth-child(odd) {
 	/* background-image: -webkit-linear-gradient(top,#EFEFEF,#DFDFDF); */
 	}
-.alrp-table input[type="submit"], .alrp-table .button-secondary{
-	padding: 5px 22px;
+.alrp-table input[type="submit"]{
+	/* padding: 5px 22px; */
 }
 .alrp-widefat, .alrp-table textarea {
 	margin: 5px 0;

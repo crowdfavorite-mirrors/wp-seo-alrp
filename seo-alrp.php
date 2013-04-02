@@ -4,7 +4,7 @@ Plugin Name: SEO Auto Links & Related Posts
 Plugin URI: http://exclusivewp.com/seo-auto-links-related-posts/
 Author: Purwedi Kurniawan
 Author URI: http://exclusivewp.com
-Version: 1.2.9.23
+Version: 1.2.12.12
 Description:  SEO Auto Links & Related Posts main features are auto create internal link, add related posts below content, and show slide out related posts in the bottom right corner when visitor scroll down and reach the end of article. <a href="admin.php?page=alrp">Configure...</a>
 */
 
@@ -201,10 +201,13 @@ function pkalrp_tokenize_stopwords( $content ) {
  **/
 add_filter( 'the_content', 'pkalrp_filter_content' );
 function pkalrp_filter_content( $content ) {
-	$content = pkalrp_filter_content_manuallink( $content );
-	$content = pkalrp_filter_content_autolink( $content );
-	$content = pkalrp_filter_content_relatedposts( $content );
-	$content .= '<div id="alrp-slidebox-anchor"></div>';
+	if( is_single() || is_page() ){
+		$content = pkalrp_filter_content_manuallink( $content );
+		$content = pkalrp_filter_content_autolink( $content );
+		$content = pkalrp_filter_content_relatedposts( $content );
+		$content .= '<div id="alrp-slidebox-anchor"></div>';
+		$content = str_replace(array('#pstarttag#','#pendtag#'),array('<p>','</p>'), $content);
+	}	
 	return $content;
 }
 
