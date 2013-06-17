@@ -237,8 +237,8 @@ function pkalrp_filter_content_relatedposts( $content ) {
 function pkalrp_filter_content_autolink( $content ) {
 	$options = get_option( 'alrp_al_options' );
 	$gen_options = get_option( 'alrp_gs_options' );
-
-	if ( ( $options['enable'] )&&( $options['tag']||$options['keyword'] ) ) {
+	//Edited the function to only work on everything except pages
+	if ( ( $options['enable'] )&&( $options['tag']||$options['keyword'] ) && !is_page() ) {
 
 		global $post;
 		$cache_key = 'alrp_al_keys_'.$post->ID;
